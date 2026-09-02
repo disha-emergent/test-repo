@@ -1,0 +1,175 @@
+{
+  "project_title": "PULSE // The Kinetic Counter — Award-Winning Minimalist Landing Page",
+  "app_type": "landing_page",
+  "theme_mode": "light",
+  "design_archetype": "Swiss High-Contrast Architectural Minimalism + Kinetic Interaction",
+  "colors": {
+    "background": {
+      "primary": "#F8F7F4",
+      "secondary": "#EFECE6",
+      "card": "#FFFFFF",
+      "glass": "rgba(248, 247, 244, 0.75)",
+      "accent_surface": "#111111"
+    },
+    "text": {
+      "primary": "#0D0D0D",
+      "secondary": "#55524E",
+      "muted": "#8C8780",
+      "contrast": "#FFFFFF"
+    },
+    "accents": {
+      "kinetic_orange": "#FF3E20",
+      "electric_indigo": "#3B4CCA",
+      "subtle_border": "rgba(13, 13, 13, 0.08)",
+      "active_glow": "rgba(255, 62, 32, 0.15)"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Syne, Cabinet Grotesk, sans-serif",
+      "body": "Plus Jakarta Sans, Inter, sans-serif",
+      "mono": "Space Mono, JetBrains Mono, monospace"
+    },
+    "scale": {
+      "hero_headline": "text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none",
+      "counter_number": "text-7xl sm:text-9xl md:text-[12rem] lg:text-[16rem] font-extrabold tracking-tighter leading-none font-mono",
+      "section_title": "text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight",
+      "chapter_number": "text-xs font-mono uppercase tracking-[0.3em] text-amber-600 dark:text-amber-400",
+      "body_text": "text-base sm:text-lg leading-relaxed text-secondary",
+      "caption": "text-xs sm:text-sm font-mono tracking-widest uppercase text-muted"
+    }
+  },
+  "layout_and_spacing": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-12",
+    "section_padding": "py-24 md:py-36",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8",
+    "header_height": "h-20"
+  },
+  "components": {
+    "hero_section": {
+      "component_name": "HeroCounterSection",
+      "file": "frontend/src/components/HeroCounterSection.js",
+      "description": "Kinetic hero centerpiece containing the line-by-line masked headline reveal, the tactile big increment button with ripple/burst particle effects, and the giant reactive digital readout.",
+      "features": [
+        "Masked line-by-line headline reveal on mount",
+        "Giant responsive count readout with spring digit animation",
+        "Tactile primary increment button with Web Audio click feedback, particle burst canvas, and ripple expander",
+        "Velocity meter indicator showing clicks-per-second",
+        "Reset & Quick Increment modifier controls (+1, +10, +100, Reset)",
+        "Session streak & milestone celebrate toast triggers"
+      ]
+    },
+    "editorial_marquee": {
+      "component_name": "EditorialMarquee",
+      "file": "frontend/src/components/EditorialMarquee.js",
+      "description": "Slow, elegant kinetic ribbon ticker with low contrast typography creating continuous architectural momentum across the viewport.",
+      "features": [
+        "Infinite smooth horizontal drift powered by framer-motion or CSS keyframes",
+        "Serif & Monospace typography blend",
+        "Interactive hover pause or speed shift"
+      ]
+    },
+    "manifesto_chapters": {
+      "component_name": "ManifestoSection",
+      "file": "frontend/src/components/ManifestoSection.js",
+      "description": "Numbered 4-chapter manifesto breakdown analyzing the philosophy of counting, tactile interaction, and transient digital states.",
+      "features": [
+        "Chapter I: The Primal Act of Counting",
+        "Chapter II: Kinetic Accumulation & Physics",
+        "Chapter III: The Ephemeral State (No Database, Pure Presence)",
+        "Chapter IV: Architectural Harmony in UI Design",
+        "Interactive chapter accordions / interactive focus cards"
+      ]
+    },
+    "analytics_dashboard": {
+      "component_name": "InteractionMetrics",
+      "file": "frontend/src/components/InteractionMetrics.js",
+      "description": "High-density minimal telemetry card showing live session metrics: total clicks, peak velocity, average click rhythm, click time breakdown, and session age timer.",
+      "features": [
+        "Live session stats counters",
+        "Click velocity gauge meter",
+        "Interactive milestone achievements tracker (e.g., '10 Clicks: Origin', '50 Clicks: Momentum', '100 Clicks: Kinetic Master')",
+        "Live chart visualization of click rhythm using Recharts/SVG"
+      ]
+    },
+    "spatial_3d_canvas": {
+      "component_name": "Spatial3DCanvas",
+      "file": "frontend/src/components/Spatial3DCanvas.js",
+      "description": "Subtle Three.js / Canvas 3D floating kinetic mathematical shapes or light-shadow geometry that rotates dynamically according to cursor position and click count.",
+      "features": [
+        "Interactive 3D geometry canvas reacting to counter value",
+        "Light/shadow minimal aesthetic matching bone-white theme",
+        "Smooth fallback for lower powered devices"
+      ]
+    },
+    "header_nav": {
+      "component_name": "HeaderNav",
+      "file": "frontend/src/components/HeaderNav.js",
+      "description": "Floating glassmorphic navigation with live counter badge, audio toggle switch, theme switcher, and scroll indicator.",
+      "features": [
+        "Glassmorphism blur background with subtle border",
+        "Synthesized Audio Toggle (Click SFX state)",
+        "Live Mini-Counter Indicator in header",
+        "Quick Reset button in Header"
+      ]
+    },
+    "footer_section": {
+      "component_name": "FooterSection",
+      "file": "frontend/src/components/FooterSection.js",
+      "description": "Bold editorial footer with massive oversized branding signature, system status indicator, and copyright.",
+      "features": [
+        "Massive text signature: 'COUNT. OBSERVE. REPEAT.'",
+        "Live session time indicator",
+        "Reset counter action with confirmation dialog"
+      ]
+    }
+  },
+  "motion_and_effects": {
+    "lenis_scroll": true,
+    "framer_motion_variants": {
+      "headline_reveal": {
+        "initial": { "y": "100%", "opacity": 0 },
+        "animate": { "y": "0%", "opacity": 1 },
+        "transition": { "duration": 0.8, "ease": [0.16, 1, 0.3, 1] }
+      },
+      "button_press": {
+        "whileTap": { "scale": 0.94, "y": 2 },
+        "whileHover": { "scale": 1.02 }
+      },
+      "number_pop": {
+        "initial": { "scale": 0.8, "opacity": 0.5 },
+        "animate": { "scale": 1, "opacity": 1 },
+        "transition": { "type": "spring", "stiffness": 400, "damping": 25 }
+      }
+    },
+    "audio_sfx": {
+      "type": "Web Audio API Synthesizer",
+      "sound_modes": ["tactile_click", "soft_pop", "milestone_chime"]
+    }
+  },
+  "image_urls": {
+    "hero_sculpture": "https://images.unsplash.com/photo-1694540784497-ed3697d41952?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwYWJzdHJhY3QlMjBzY3VscHR1cmUlMjB3aGl0ZSUyMGdlb21ldHJpYyUyMGFyY2hpdGVjdHVyYWwlMjBsaWdodCUyMHNoYWRvd3xlbnwwfHx8fDE3ODgzMzA5NzZ8MA&ixlib=rb-4.1.0&q=85",
+    "architectural_texture": "https://images.unsplash.com/photo-1648218466069-bb93310f97b7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxtaW5pbWFsJTIwYWJzdHJhY3QlMjBzY3VscHR1cmUlMjB3aGl0ZSUyMGdlb21ldHJpYyUyMGFyY2hpdGVjdHVyYWwlMjBsaWdodCUyMHNoYWRvd3xlbnwwfHx8fDE3ODgzMzA5NzZ8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "test_ids": {
+    "hero_increment_button": "counter-increment-button",
+    "hero_count_display": "counter-live-display",
+    "mini_counter_badge": "header-mini-counter",
+    "reset_button": "counter-reset-button",
+    "quick_add_10_button": "counter-add-10-button",
+    "quick_add_100_button": "counter-add-100-button",
+    "audio_toggle_button": "audio-sfx-toggle",
+    "theme_toggle_button": "theme-mode-toggle",
+    "velocity_meter": "click-velocity-meter",
+    "milestones_list": "counter-milestones-list",
+    "manifesto_section": "manifesto-chapters-container"
+  },
+  "instructions_to_main_agent": [
+    "Ensure the hero increment button is extremely prominent, tactile, and satisfying with spring motion and visual click bursts.",
+    "Implement Web Audio API synthesized click sound effects with a toggle button in the navbar.",
+    "Maintain a clean, minimal, light architectural aesthetic with warm off-white background (#F8F7F4), deep charcoal text (#0D0D0D), and vibrant kinetic orange accent (#FF3E20).",
+    "Use framer-motion for smooth entrance animations, digit flip/slide number transitions, and line-by-line masked text reveals.",
+    "Include live telemetry/metrics showing click speed (clicks/sec), session streak, achievement milestone unlocks, and a quick reset mechanism.",
+    "Include data-testid attributes on all key interactive elements as specified in test_ids."
+  ]
+}
